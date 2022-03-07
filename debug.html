@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug in chrome</title>
+</head>
+
+<body>
+    <script>
+        let inputA = 100;
+        let inputB = 45;
+        let ObjectA = {
+            age: 24,
+            name: 'Luu',
+            gender: 'Male',
+            address: 'Tay Son - Binh Dinh'
+        };
+        let ObjectB = {};
+        if (ObjectB) {
+            console.log('Have a Object');
+        } else {
+            console.log('Undefined Object');
+        }
+        const CountSumNumber = (valueA, valueB) => {
+            console.log('Value a:', valueA, 'and Value b:', valueB);
+            let sumValue = valueA + valueB;
+            console.log('And Sum is:', sumValue);
+            checkValueSmaller(valueA, valueB, sumValue)
+        }
+        const checkValueSmaller = (first, second, third) => {
+            if (first > second) {
+                console.log('A > B');
+            } else {
+                console.log('B > A');
+            }
+            if (third > 100) {
+                console.log('Third larger than 100');
+            } else {
+                console.log('Third smaller than 100');
+            }
+        }
+        CountSumNumber(inputA, inputB)
+    </script>
+</body>
+
+</html>
